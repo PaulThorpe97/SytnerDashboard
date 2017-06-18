@@ -1,0 +1,83 @@
+@model IEnumerable<SytnerDashboard.Models.StaffReview>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Forename)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Surenamename)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Productivity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WorkQuality)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TechnicalSkills)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Creativity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Attendance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommunicationSkills)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateOfReview)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Forename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surenamename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Productivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkQuality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TechnicalSkills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Creativity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attendance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommunicationSkills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfReview)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,72 @@
+@model SytnerDashboard.Models.StaffReview
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StaffReview</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Forename)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Forename)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Surenamename)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Surenamename)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Productivity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Productivity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkQuality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkQuality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TechnicalSkills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TechnicalSkills)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Creativity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Creativity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attendance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attendance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunicationSkills)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommunicationSkills)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfReview)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfReview)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

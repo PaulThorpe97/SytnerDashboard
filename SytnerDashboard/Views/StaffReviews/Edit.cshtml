@@ -1,0 +1,92 @@
+@model SytnerDashboard.Models.StaffReview
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>StaffReview</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="Forename" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Forename" class="form-control" />
+                <span asp-validation-for="Forename" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Surenamename" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Surenamename" class="form-control" />
+                <span asp-validation-for="Surenamename" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Productivity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Productivity" class="form-control" />
+                <span asp-validation-for="Productivity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WorkQuality" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="WorkQuality" class="form-control" />
+                <span asp-validation-for="WorkQuality" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TechnicalSkills" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TechnicalSkills" class="form-control" />
+                <span asp-validation-for="TechnicalSkills" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Creativity" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Creativity" class="form-control" />
+                <span asp-validation-for="Creativity" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Attendance" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Attendance" class="form-control" />
+                <span asp-validation-for="Attendance" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CommunicationSkills" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CommunicationSkills" class="form-control" />
+                <span asp-validation-for="CommunicationSkills" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateOfReview" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DateOfReview" class="form-control" />
+                <span asp-validation-for="DateOfReview" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
